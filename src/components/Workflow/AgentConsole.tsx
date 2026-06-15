@@ -394,14 +394,14 @@ export function AgentConsole({ card, runs, onRunStart, onRunUpdate }: AgentConso
                                 <span className="text-[#8a8f9e]">Gas used</span>
                                 <span className="text-[#e2e5ed]">{Number(execPayload.gasUsed ?? 0).toLocaleString()}</span>
                               </div>
-                              {execPayload.transactionHash && (
+                              {typeof execPayload.transactionHash === "string" && (
                                 <a
                                   href={`https://sepolia.basescan.org/tx/${execPayload.transactionHash}`}
                                   target="_blank"
                                   rel="noreferrer"
                                   className="block truncate font-mono text-[10px] text-[#58a7ff] hover:underline"
                                 >
-                                  {shortHash(String(execPayload.transactionHash))}
+                                  {shortHash(execPayload.transactionHash)}
                                 </a>
                               )}
                             </div>
