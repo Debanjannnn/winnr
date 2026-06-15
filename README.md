@@ -28,8 +28,7 @@ You sign one ERC-7710 permission
         ▼
   Full audit trail · every event, payment, decision, execution
 ```
-
-![Uploading image.png…]()
+<img width="1063" height="598" alt="image" src="https://github.com/user-attachments/assets/c6d6d575-eaf1-4949-8527-6fad579389b7" />
 
 
 **Scout** scans Polymarket for markets where the crowd price and the statistical model diverge above a threshold — a signal worth investigating.
