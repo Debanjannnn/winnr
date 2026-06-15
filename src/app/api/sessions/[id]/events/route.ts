@@ -1,0 +1,14 @@
+import { NextResponse } from "next/server";
+import { runtime as agentRuntime } from "@/lib/runtime";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const session = await agentRuntime.getSession(id);
+  if (!session) {
+    return NextResponse.json({ error: "session not found" }, { status: 404 });
+  }
+  return NextResponse.json(await agentRuntime.listEvents(id));
+}

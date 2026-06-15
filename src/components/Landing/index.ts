@@ -1,0 +1,11 @@
+export { SiteHeader } from "./SiteHeader";
+export { Hero } from "./Hero";
+export { PartnerStrip } from "./PartnerStrip";
+export { PlatformSection } from "./PlatformSection";
+export { StatsGrid } from "./StatsGrid";
+export { Pillars } from "./Pillars";
+export { Manifesto } from "./Manifesto";
+export { UseCases } from "./UseCases";
+export { AgentLab } from "./AgentLab";
+export { SiteFooter } from "./SiteFooter";
+export { SmoothScroll } from "./SmoothScroll";

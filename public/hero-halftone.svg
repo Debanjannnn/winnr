@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="fieldGlow" cx="78%" cy="47%" r="64%">
+      <stop offset="0" stop-color="#c9b8f6" />
+      <stop offset="0.34" stop-color="#a06bff" />
+      <stop offset="0.66" stop-color="#6f4a91" />
+      <stop offset="1" stop-color="#080b0c" />
+    </radialGradient>
+
+    <radialGradient id="softFace" cx="58%" cy="48%" r="43%">
+      <stop offset="0.1" stop-color="#030405" />
+      <stop offset="0.46" stop-color="#07090b" />
+      <stop offset="0.72" stop-color="#111018" />
+      <stop offset="1" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="leftFade" x1="0" x2="1">
+      <stop offset="0" stop-color="#030405" />
+      <stop offset="0.38" stop-color="#030405" stop-opacity="0.96" />
+      <stop offset="0.63" stop-color="#030405" stop-opacity="0.36" />
+      <stop offset="1" stop-color="#030405" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="revealGradient" cx="78%" cy="48%" r="72%">
+      <stop offset="0" stop-color="white" />
+      <stop offset="0.58" stop-color="white" />
+      <stop offset="0.84" stop-color="#777" />
+      <stop offset="1" stop-color="black" />
+    </radialGradient>
+
+    <pattern id="dotMatrix" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="2.2" cy="2.2" r="1.8" fill="#050607" />
+    </pattern>
+
+    <filter id="organicWarp">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011 0.017" numOctaves="4" seed="21" />
+      <feDisplacementMap in="SourceGraphic" scale="54" />
+    </filter>
+
+    <mask id="rightReveal">
+      <rect width="1600" height="820" fill="black" />
+      <rect x="350" y="0" width="1250" height="820" fill="url(#revealGradient)" />
+    </mask>
+  </defs>
+
+  <rect width="1600" height="820" fill="#030405" />
+  <rect x="470" y="-40" width="1200" height="900" fill="url(#fieldGlow)" mask="url(#rightReveal)" />
+
+  <ellipse cx="1035" cy="420" rx="540" ry="430" fill="#c9b8f6" opacity="0.16" filter="url(#organicWarp)" />
+  <ellipse cx="940" cy="480" rx="360" ry="310" fill="url(#softFace)" filter="url(#organicWarp)" />
+  <path
+    d="M710 125C820 86 935 105 1024 180C1097 241 1114 319 1069 386C1036 436 1064 470 1127 500C1005 524 965 585 996 720C844 684 743 620 707 511C683 437 722 394 659 334C605 283 608 176 710 125Z"
+    fill="#020304"
+    opacity="0.92"
+    filter="url(#organicWarp)"
+  />
+
+  <rect width="1600" height="820" fill="url(#dotMatrix)" opacity="0.95" />
+  <rect width="1600" height="820" fill="url(#leftFade)" />
+  <rect y="650" width="1600" height="170" fill="url(#leftFade)" transform="rotate(180 800 735)" opacity="0.72" />
+</svg>
