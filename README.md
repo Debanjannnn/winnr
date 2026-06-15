@@ -1,4 +1,6 @@
 # Winnr
+![Uploading image.png…]()
+
 
 An autonomous agent network that researches, debates, and executes prediction market positions — all under a single permission you sign, and can revoke instantly.
 
@@ -27,6 +29,8 @@ You sign one ERC-7710 permission
         ▼
   Full audit trail · every event, payment, decision, execution
 ```
+
+![Uploading image.png…]()
 
 **Scout** scans Polymarket for markets where the crowd price and the statistical model diverge above a threshold — a signal worth investigating.
 
